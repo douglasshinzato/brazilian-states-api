@@ -2,13 +2,13 @@ import { FastifyInstance } from 'fastify'
 import { knex } from '../database'
 
 export async function statesRoutes(app: FastifyInstance) {
-  app.get('/', async () => {
+  app.get('/states', async () => {
     const states = await knex('states')
 
     return { states }
   })
 
-  app.get('/:acronym', async (request, reply) => {
+  app.get('states/:acronym', async (request, reply) => {
     const { acronym } = request.params as { acronym: string }
 
     try {
@@ -25,7 +25,7 @@ export async function statesRoutes(app: FastifyInstance) {
     }
   })
 
-  app.get('/capital/:capital', async (request, reply) => {
+  app.get('capital/:capital', async (request, reply) => {
     const { capital } = request.params as { capital: string }
 
     try {
