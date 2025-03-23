@@ -11,7 +11,7 @@ app.register(statesRoutes, {
 app
   .listen({
     port: env.PORT,
-    host: 'RENDER' in process.env ? '0.0.0.0' : 'localhost',
+    host: '0.0.0.0',
   })
   .then(() => {
     console.log('Server Running!')
