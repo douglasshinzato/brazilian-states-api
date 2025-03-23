@@ -14,5 +14,5 @@ app
     host: '0.0.0.0',
   })
   .then(() => {
-    console.log('Server Running!')
+    console.log(`Server running at port: ${env.PORT}`)
   })
