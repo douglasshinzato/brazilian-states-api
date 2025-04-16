@@ -16,3 +16,7 @@ app
   .then(() => {
     console.log(`Server running at port: ${env.PORT}`)
   })
+
+app.get('/', async () => {
+  return { message: 'Hello!' }
+})
